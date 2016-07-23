@@ -1,6 +1,6 @@
 # raspberry-pi-camera-viewer-embedded-example
 
-Example code to preview gstreamer pipeline from Android application.
+Example code to preview gstreamer pipeline from Android application. Make sure you have RaspberryPi Camera Viewer already installed.
 
 ## Example for single preview
 
