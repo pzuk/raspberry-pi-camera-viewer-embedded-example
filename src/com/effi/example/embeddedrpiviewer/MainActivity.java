@@ -15,7 +15,7 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
   private final static String PREVIEW_INTENT_KEY = "pl.effisoft.rpicamviewer2.PREVIEW";
-  private final static int camera = 0;
+  private final static int CAMERA_ID = 0;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -32,32 +32,32 @@ public class MainActivity extends Activity {
         //--------- Basic settings
         intent.putExtra("full_screen", true);
 
-        intent.putExtra("name" + camera, "My pipeline name");
-        intent.putExtra("host" + camera, "192.168.0.1");
-        intent.putExtra("port" + camera, 5000);
-        intent.putExtra("description" + camera, "My pipeline description");
-        intent.putExtra("uuid" + camera, UUID.randomUUID().toString());
-        intent.putExtra("aspectRatio" + camera, 1.6);
-        intent.putExtra("autoplay" + camera, true);
+        intent.putExtra("name" + CAMERA_ID, "My pipeline name");
+        intent.putExtra("host" + CAMERA_ID, "192.168.0.1");
+        intent.putExtra("port" + CAMERA_ID, 5000);
+        intent.putExtra("description" + CAMERA_ID, "My pipeline description");
+        intent.putExtra("uuid" + CAMERA_ID, UUID.randomUUID().toString());
+        intent.putExtra("aspectRatio" + CAMERA_ID, 1.6);
+        intent.putExtra("autoplay" + CAMERA_ID, true);
 
         //--------- Enable advanced mode
-        intent.putExtra("advanced" + camera, true);
-        intent.putExtra("custom_pipeline" + camera, editText1.getText().toString());
+        intent.putExtra("advanced" + CAMERA_ID, true);
+        intent.putExtra("custom_pipeline" + CAMERA_ID, editText1.getText().toString());
 
         //--------- Enable application extra features
-        intent.putExtra("extraFeaturesEnabled" + camera, false);
+        intent.putExtra("extraFeaturesEnabled" + CAMERA_ID, false);
 
         //--------- Add autoaudiosink to featured pipeline
-        intent.putExtra("extraFeaturesSoundEnabled" + camera, false);
+        intent.putExtra("extraFeaturesSoundEnabled" + CAMERA_ID, false);
 
         //--------- Scale Video Stream option
-        intent.putExtra("extraResizeVideoEnabled" + camera, false);
-        intent.putExtra("width" + camera, 320);
-        intent.putExtra("height" + camera, 200);
+        intent.putExtra("extraResizeVideoEnabled" + CAMERA_ID, false);
+        intent.putExtra("width" + CAMERA_ID, 320);
+        intent.putExtra("height" + CAMERA_ID, 200);
 
         //--------- Add plugins
         ArrayList<String> plugins = new ArrayList<String>();
-        intent.putExtra("plugins" + camera, plugins);
+        intent.putExtra("plugins" + CAMERA_ID, plugins);
 
         intent.setPackage("pl.effisoft.rpicamviewer2");
         startActivityForResult(intent, 0);
